@@ -1,3 +1,7 @@
+// Publico  public
+// Privado private
+
+
 //Caracteristicas
 //Comportamentos
 
@@ -5,8 +9,24 @@ class Camiseta{
 
   //Atributos
   String? tamanho;
-  String? cor;
+  String? _cor;
   String? marca;
+
+  //Atributos de Classe
+  static const String nome = 'Camiseta';
+
+  //Métodos de Classe
+  static String recuperarNome() => nome;
+
+  String? get cor => _cor;
+  set cor(String? cor){
+    _Camiseta2();
+    if(cor == 'Verde'){
+      throw Exception('Não pode ser verde');
+    }
+  }
+
+
 
 
   //Funções dentro de classe
@@ -18,4 +38,12 @@ class Camiseta{
       return 'Pode lavar na máquina';
     }
 }
+}
+
+class _Camiseta2 {
+  void recuperarCor(){
+    var camiseta = Camiseta();
+    camiseta._cor = 'Verde';
+  }
+
 }
