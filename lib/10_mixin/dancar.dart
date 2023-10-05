@@ -1,0 +1,3 @@
+mixin Dancar on Artista {
+  
+}
